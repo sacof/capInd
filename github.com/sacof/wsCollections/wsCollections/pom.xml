@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.collections.app</groupId>
 	<artifactId>wsCollections</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>wsCollections</name>
 	<description>conection to webservice</description>
 	<properties>
@@ -57,11 +57,15 @@
 	</dependencies>
 
 	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+				<mainClass>com.collections.app.WsCollectionsApplication</mainClass>
+				<layout>JAR</layout>
+
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
